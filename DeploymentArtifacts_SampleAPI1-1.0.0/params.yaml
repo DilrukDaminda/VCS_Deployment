@@ -1,35 +1,10 @@
 environments:
-    - name:
-      configs:
-          endpoints:
-              production:
-              sandbox:
-          security:
-              enabled:
-              type:
-              username:
-              password:
-          deploymentEnvironments:
-              - displayOnDevportal:
-                deploymentEnvironment:
-                deploymentVhost:
-              - displayOnDevportal:
-                deploymentEnvironment:  
-                deploymentVhost:
-          certs:
-              - hostName:
-                alias:
-                path:
-              - hostName:
-                alias:
-                path:
-          mutualSslCerts:
-              - tierName:
-                alias:
-                path:
-              - tierName:
-                alias:
-                path:
-          policies:
-              - 
-              -  
+  - name: dev
+    configs:
+      endpoints:
+          production:
+              url: 'https://jsonplaceholder.typicode.com/'
+      deploymentEnvironments:
+          - displayOnDevportal: true
+            deploymentEnvironment: Default
+            deploymentVhost : localhost
